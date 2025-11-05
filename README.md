@@ -21,6 +21,26 @@ A classic Breakout/Brick Out game with paddle, ball, and bricks.
 
 The Brick Out model includes comprehensive test coverage:
 
+### Installation
+
+To run the Cucumber.js BDD tests, you need to install the dependencies:
+
+**If you already have a package.json file:**
+```bash
+npm install
+```
+
+**If you don't have a package.json file:**
+```bash
+# Initialize a new npm project (follow the prompts or use -y for defaults)
+npm init -y
+
+# Install cucumber.js
+npm install --save-dev @cucumber/cucumber
+```
+
+This will install cucumber.js and other required packages.
+
 ### Unit Tests (30+ tests)
 Basic unit tests covering individual components.
 
