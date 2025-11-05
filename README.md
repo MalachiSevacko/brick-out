@@ -77,6 +77,25 @@ npm run test:all
 - `features/ball.feature` - Ball physics, wall bounces, paddle collisions
 - `features/gameplay.feature` - Complete game flow, scoring, win/loss conditions
 
+## Continuous Integration
+
+This project uses GitHub Actions for automated testing. The workflow is defined in `.github/workflows/test.yml` and runs on every push and pull request to the main branch.
+
+**The workflow includes:**
+
+- **Automatic triggers:** Runs on push/pull request to main branch
+- **Manual trigger:** Can be run manually using `workflow_dispatch` from the GitHub Actions tab
+- **Test steps:**
+  1. Unit tests (`npm test`) - 30+ tests covering individual components
+  2. Cucumber BDD tests (`npm run test:cucumber`) - 25 scenarios with 115 steps
+
+The workflow uses Ubuntu Linux with Node.js 18, automatically installs dependencies, and reports test results in the GitHub Actions UI.
+
+**To manually run the workflow:**
+1. Go to the "Actions" tab in your GitHub repository
+2. Select "Tests" from the workflows list
+3. Click "Run workflow" and choose the branch
+
 ## About P5.js
 
 P5.js is a JavaScript library that makes coding accessible for artists, designers, educators, and beginners. It's a modern interpretation of Processing for the web.
